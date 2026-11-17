@@ -1,0 +1,74 @@
+# ---------------------------------------------------
+# .gitignore für Django / DRF-Projekte mit .venv
+# ---------------------------------------------------
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- Virtuelle Umgebung ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Django ---
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+static_root/
+
+# Django-Migrationen bewusst NICHT ignorieren (Standard),
+# nur bei Bedarf einkommentieren:
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# --- Umgebungsvariablen / Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- DRF / API-Schema-Tools (optional, je nach Setup) ---
+schema.yml
+schema.yaml
+
+# --- Tests & Coverage ---
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+
+# --- Caches / Build-Artefakte ---
+.cache/
+*.egg-info/
+.eggs/
+build/
+dist/
+pip-wheel-metadata/
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Betriebssystem ---
+.DS_Store
+Thumbs.db
+
+# --- Node (falls Frontend-Tools wie Tailwind/Webpack genutzt werden) ---
+node_modules/
+
+# --- Celery (falls genutzt) ---
+celerybeat-schedule
+celerybeat.pid
